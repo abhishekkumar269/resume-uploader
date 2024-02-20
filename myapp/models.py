@@ -9,15 +9,22 @@ STATE_CHOICE = (
 )
 
 class Resume(models.Model):
-    name = models.CharField(max_length=200)
-    gender = models.CharField(max_length=150)
-    email = models.CharField(max_length= 200)
-    phone = models.IntegerField(max_length = 20)
-    job_city = models.CharField(max_length=500)
-    address = models.TextField(max_length=200)
+    name = models.CharField(max_length=100)
+    dob = models.DateField(auto_now=False,auto_now_add =False)
+    gender = models.CharField(max_length=100)
+    locality = models.CharField(max_length=100)
+    #phone = models.IntegerField()
+    city = models.CharField(max_length=100)
+    pin = models.IntegerField()
     state = models.CharField(choices= STATE_CHOICE, max_length = 255)
-    profie_image = models.ImageField(upload_to='profileimg',blank=True)
+    mobile = models.PositiveIntegerField()
+    email = models.EmailField()
+    job_city = models.CharField(max_length=50)
+    profile_image = models.ImageField(upload_to='profileimg',blank=True)
     my_file = models.FileField(upload_to='doc',blank=True)
+  
+    
+   
 
 
     
