@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load myfilter %}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class= "alert alert-danger text-center p-3 ">Candidate Details</h1>
+
+        <div class="row">
+
+            <div class="col sm-10 shadow offset-sm-0.5 p-5">
+                <h3 class="text-center"><u>Resume</u></h3>
+                <p class="float-end"> Application No:{{candidate.id}}</p>
+                <img src="{{candate.profile_img}}" alt="" class = "img-fluid img-thumbnail float-end mt-4 " width="150" height="150">
+                <p>Name:{{candidate.name}}</p>
+                <p>Date of Birth:{{Candidate.dob}}</p>
+                <p>Gender:{{candidate.gender}}</p>
+                <p>Adress:{{candidate.locality}},Pin-{{candidate.pin}},State-{{candidate.state}}</p>
+                <p>Mobile No:{{candidate.mobile}}</p>
+                <p>Email Id:{{candidate.email}}</p>
+                <p>Preferred Job Location:{{candidate.job_city|remove_special:"[]'"}}</p> 
+                <p>Attachments:<a href="{{candidate.my_file.url}}">Download File</p>
+                    <div class="text-center"> 
+                        <a href="/" class="btn btn-danger" >Back to Home</a>
+                    </div>
+                    
+            </div>
+
+         
+                
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</body>
+</html>

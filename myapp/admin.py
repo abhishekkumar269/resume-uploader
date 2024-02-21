@@ -7,6 +7,6 @@ from .models import Resume
 
 @admin.register(Resume)
 class ResumeModelAdmin(admin.ModelAdmin):
-    list_display = ['name','email','state','my_file','job_city']
+    list_display = ['id','name','dob','gender','locality','city','pin','state','mobile','job_city','profile_image','my_file']
 
 

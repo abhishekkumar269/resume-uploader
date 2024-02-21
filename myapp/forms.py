@@ -24,7 +24,9 @@ class ResumeForm(forms.ModelForm):
         model = Resume  
         fields = ['name','dob','gender','locality','pin','state','mobile','email','job_city','profile_image','my_file']
         
-        labels = {'name': 'FullName',
+        labels = {
+            
+                  'name': 'FullName',
                   'dob': 'Date of Birth',
                   'pin': 'Pin Code',
                   'mobile':'Mobile No',
